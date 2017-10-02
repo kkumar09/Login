@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Access</title>
+	<style>
+		#loginSection{
+			margin-top: 10%;
+			margin-left: 25%;
+			width: 50%;
+			border: 3px solid #230e0e;
+			position: relative;
+			top:50%;
+			border-style: outset;
+			padding: 10px;
+		}
+		input[type=text], input[type=email] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		#notice{
+			color:darkred;
+		}
+	</style>
+</head>
+<body>
+	<div id="loginSection">
+		<div id="Alias">
+			Alias:<input type="text" id="username"  placeholder = "Enter the given name buddy..?">
+		</div>
+		<div id="EM">
+			eMAIL:<input type="email" id="Email" placeholder = "Enter the given Email.....">
+		</div>
+
+		<button id="AcceButton" onclick="valid();">AccessIn</button>
+		<p id="notice"></p>
+	</div>	
+	
+<script type="text/javascript">
+	debugger;
+	var valid = function(){
+		var username = document.getElementById('username').value;
+		var Email = document.getElementById('Email').value;
+
+		var ex_username = "Developers";
+		var ex_Email = "coders02@developer.com";
+		
+		if(username =="" && Email == "" ){
+			document.getElementById('notice').innerHTML = "You need to enter the Alias and Email..."
+		}
+
+		else{
+			if(username ==ex_username && Email == ex_Email ){
+			document.getElementById('notice').innerHTML = "Wow..! you entered the right info.."
+			}
+			else{
+				document.getElementById('notice').innerHTML = "Hey..! you need to verify Alias & Email"
+			}
+		}
+	}
+	
+	
+</script>	
+</body>
+</html>
